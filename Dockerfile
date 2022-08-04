@@ -1,4 +1,4 @@
-FROM ghcr.io/hyperk/hkpilot:latest
+FROM ghcr.io/guiguem/hkpilot:latest
 
 # COPY ../hkpilot /usr/local/hk/hkpilot
 
