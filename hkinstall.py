@@ -13,5 +13,6 @@ class ExternalsMeta(MetaPackage):
         self._package_version = "v0.0.1"
         self._depends_on = {
             "ROOT": "*",
-            "Geant4": "*"
+            "Geant4": "*",
+            "WCSim": "*"
             }

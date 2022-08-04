@@ -1,0 +1,23 @@
+name: Build on push
+
+on:
+  push:
+    branches: [master, develop]
+    tags: ['*']
+
+jobs:
+
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        name: Repo checkout
+        with:
+          persist-credentials: true
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag ghcr.io/hyperk/hk-meta-externals:latest
+      - name: Push the Docker image
+        run: docker push ghcr.io/hyperk/hk-meta-externals:latest
