@@ -11,8 +11,3 @@ class ExternalsMeta(MetaPackage):
 
         self._package_name = "hk-meta-externals"
         self._package_version = "v0.0.1"
-        self._depends_on = {
-            "ROOT": "*",
-            "Geant4": "*",
-            "WCSim": "*"
-            }

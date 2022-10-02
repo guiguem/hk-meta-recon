@@ -1,20 +1,10 @@
-FROM ghcr.io/guiguem/hkpilot:latest
-
-# COPY ../hkpilot /usr/local/hk/hkpilot
-
-# WORKDIR /usr/local/hk/hkpilot
-
-# SHELL ["/bin/bash", "-c"]
-
-# RUN git config --global url."https://github.com/".insteadOf git@github.com: &&\
-    # git config --global url."https://".insteadOf git://
-
-# RUN python3 setup.py install && \
-    # . setup.sh &&\
-    # hkp --version
+FROM ghcr.io/hyperk/hk-pilot:main
 
 COPY . /usr/local/hk/hk-meta-externals
 
+RUN git config --global url."https://github.com/".insteadOf git@github.com: &&\
+    git config --global url."https://".insteadOf git://
+
 WORKDIR /usr/local/hk
-RUN . /usr/local/hk/hkpilot/setup.sh &&\
+RUN . /usr/local/hk/hk-pilot/setup.sh &&\
     hkp install -r hk-meta-externals
