@@ -46,3 +46,5 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          ssh: |
+            default=${{ env.SSH_AUTH_SOCK }}
