@@ -7,8 +7,8 @@ COPY . /usr/local/hk/hk-meta-externals
 WORKDIR /usr/local/hk
 RUN --mount=type=ssh . /usr/local/hk/hk-pilot/setup.sh &&\
     hkp install -r hk-meta-externals &&\
-    hkp clean --src ROOT &&\
-    hkp clean --src Geant4 &&\
-    hkp clean --src ToolFrameworkCore &&\
-    hkp clean --src WCSim
+    hkp clean --src --build ROOT &&\
+    hkp clean --src --build Geant4 &&\
+    hkp clean --src --build ToolFrameworkCore &&\
+    hkp clean --src --build WCSim
 
