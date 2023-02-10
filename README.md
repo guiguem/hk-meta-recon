@@ -1,1 +1,1 @@
-# Meta-package for external dependencies
+# Meta-package for Reconstruction packages
