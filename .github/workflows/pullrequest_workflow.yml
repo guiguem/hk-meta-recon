@@ -15,4 +15,4 @@ jobs:
         with:
           persist-credentials: true
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag ghcr.io/hyperk/hk-meta-externals:latest
+        run: docker build . --file Dockerfile --tag ghcr.io/hyperk/hk-meta-recon:latest
